@@ -35,11 +35,15 @@ function removeCells() {
     // querySelectorAll won't work on the way mentioned above due to its a static list
 }
 
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function colorMouseover() {
     const cells = document.querySelectorAll('#container > div');
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = '#000';
+            cell.style.backgroundColor = `rgb(${getRandom(0, 255)}, ${getRandom(0, 255)}, ${getRandom(0, 255)})`;
         });
     });
 }
