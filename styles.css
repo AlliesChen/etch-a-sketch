@@ -1,8 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
 #container {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border: 1px solid;
-    background-color: darkcyan;
+    background-color: #fff;
     display: grid;
     grid-template-rows: repeat(16, 1fr);
     grid-template-columns: repeat(16, 1fr);
@@ -10,8 +18,4 @@
 
 .cell {
     border: 1px solid;
-}
-
-.cell:hover {
-    background-color: darkgoldenrod;
 }
