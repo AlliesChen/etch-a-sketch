@@ -93,7 +93,8 @@ function colorMouseover() {
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
             cell.style.backgroundColor = `${createColorSet(rgbValue)}`;
-            console.log(`rgb(${rgbValue.join(',')})`);
+            // enable the console.log to see the changes of the color value
+            // console.log(`rgb(${rgbValue.join(',')})`);
         });
     });
 }
