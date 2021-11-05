@@ -1,4 +1,4 @@
-# Etch-a-sketch
+# Etch-a-Sketch
 
 This is a practice in the odin project:
 [the requirement for this function](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project)
