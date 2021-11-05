@@ -13,12 +13,6 @@ resetButton.addEventListener('click', () => {
 
 // the functions
 
-// Assign the grid box corresponded to user's input
-function setPlate(gridNum) {
-    container.style.cssText = `grid-template-rows: repeat(${gridNum}, 1fr); grid-template-columns: repeat(${gridNum}, 1fr)`;
-    addCells(gridNum);
-}
-
 // Use a prompt for the user to enter a number among 1 to 100.
 function getGridNum () {
     let userInput = prompt('Enter an integer among 1 to 100 to create a x*x grids plate');
@@ -26,6 +20,12 @@ function getGridNum () {
 
     if (!Number.isInteger(grids) || grids < 1 || grids > 100) getGridNum()
     return grids;
+}
+
+// Assign the grid box corresponded to user's input
+function setPlate(gridNum) {
+    container.style.cssText = `grid-template-rows: repeat(${gridNum}, 1fr); grid-template-columns: repeat(${gridNum}, 1fr)`;
+    addCells(gridNum);
 }
 
 function removeCells() {
@@ -53,10 +53,10 @@ function darkenColor(currentColors) {
             currentColors[i] = Math.round(currentColors[i] * (1 - decreaseFrac));
         }
     }
-    return(`rgb(${currentColors.join(',')})`);
+    return `rgb(${currentColors.join(',')})`;
 }
 
-// just see a comment says this got a better run-time than Math.max
+// just saw a comment says this got a better run-time than Math.max
 function maxValue(arr) {
     let max = arr[0];
   
@@ -79,7 +79,7 @@ function createColorSet(valueArray) {
             valueArray[i] = getRandom(1, 255);
         }
         primeColor = maxValue(valueArray);
-        return(`rgb(${valueArray.join(',')})`);
+        return `rgb(${valueArray.join(',')})`;
 
     } else { // 10% darken the color
         return darkenColor(valueArray);
