@@ -5,6 +5,8 @@ This is a practice in the odin project:
 
 You can color the grids plate when having your mouse over a grid. The color gets darken by each step you made, and will be full black in 10 steps after.
 
+The initial plate has 16*16 grids. Using the reset button on the left top corner, you can clear the color and make a new x\*x grids plate. The range for the 'x' is 1 to 100 without digits after decimal.
+
 ---
 
 ## Reference:
